@@ -75,3 +75,18 @@ AOS.init({
     duration: 1200,
     once: true,
 });
+async function fetchProfilData() {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+
+        const nimElement = document.getElementById('nim-user');
+        if (nimElement) {
+            nimElement.innerText = data.nim;
+        }
+    } catch (error) {
+        console.error('Gagal mengambil data:', error);
+    }
+}
+
+fetchProfilData();
