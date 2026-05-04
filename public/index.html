@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio - Ahmad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Portfolio<span>.</span></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class='bx bx-x'></i></div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle"><i class='bx bx-grid-alt'></i></div>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <section class="home section" id="home">
+           <!-- Baris 36: Hapus kata 'grid' jika masih ada -->
+<div class="home__container container">
+    
+    <!-- SEMUA TEKS MASUK KE DALAM HOME__DATA -->
+    <div class="home__data">
+        <span class="home__subtitle">Hello, I'm</span>
+        <h1 class="home__title">Akhi Ahmad</h1>
+        <h3 class="home__education">Maba Teknologi Informasi</h3>
+        <p class="home__description">
+            Mahasiswa Teknologi Informasi di Universitas Deli Sumatera. <br>
+            Fokus pada Full-stack Web Development dengan html,css,javascript,express,php,sql,python,mongodb
+        </p>
+
+        <!-- Ikon Sosial Media (LinkedIn sudah dihapus) -->
+        <div class="home__social">
+            <a href="#" target="_blank" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            <a href="#" target="_blank" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" target="_blank" class="home__social-icon"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+
+        <div class="home__buttons">
+            <a href="#" class="button">Download CV</a>
+            <a href="#about" class="button button--ghost">Explore More</a>
+        </div>
+    </div> <!-- PENUTUP HOME__DATA DI SINI -->
+
+    <!-- FOTO BERADA DI LUAR HOME__DATA TAPI MASIH DI DALAM HOME__CONTAINER -->
+    <div class="home__img-wrapper">
+        <div class="home__img-bg">
+            <img src="img/portofolio6.jpeg" alt="Ahmad" class="home__img">
+        </div>
+    </div>
+
+</div>
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section__title" data-aos="fade-up">About Me</h2>
+            <div class="about__container container grid">
+                <div class="about__img-wrapper" data-aos="fade-right">
+                    <img src="img/about.jpg" alt="About Ahmad" class="about__img">
+                </div>
+                <div class="about__data" data-aos="fade-left">
+                    <h3 class="about__title">Developer & Linux Enthusiast</h3>
+                    <p class="about__description">
+                        Saya adalah mahasiswa tahun pertama yang sedang mendalami rekayasa perangkat lunak. 
+                        Selain coding, saya sangat tertarik dengan sistem operasi Debian Linux dan Cyber Security.
+                    </p>
+                    <div class="about__info grid">
+                        <div class="about__box">
+                            <i class='bx bx-award about__icon'></i>
+                            <h3 class="about__subtitle">Experience</h3>
+                            <span class="about__subtitle-text">1st Year Student</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-briefcase-alt about__icon'></i>
+                            <h3 class="about__subtitle">Completed</h3>
+                            <span class="about__subtitle-text">5+ Projects</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-support about__icon'></i>
+                            <h3 class="about__subtitle">Support</h3>
+                            <span class="about__subtitle-text">Online 24/7</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+            </div>
+        </section>
+<section class="skills section" id="skills">
+    <h2 class="section__title" data-aos="fade-up">My Skills</h2>
+
+    <div class="skills__container container grid">
+        <!-- Frontend Development -->
+        <div class="skills__content" data-aos="fade-right">
+            <h3 class="skills__title">Frontend Development</h3>
+
+            <div class="skills__box">
+                <div class="skills__group">
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">HTML</h3>
+                            <span class="skills__level">Advanced</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">CSS</h3>
+                            <span class="skills__level">Intermediate</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">JavaScript</h3>
+                            <span class="skills__level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backend & OS -->
+        <div class="skills__content" data-aos="fade-left">
+            <h3 class="skills__title">Backend & OS</h3>
+
+            <div class="skills__box">
+                <div class="skills__group">
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">Node JS</h3>
+                            <span class="skills__level">Basic</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">Python</h3>
+                            <span class="skills__level">Basic</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">Debian Linux</h3>
+                            <span class="skills__level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        
+        <section class="services section" id="services">
+            <h2 class="section__title" data-aos="fade-up">Services</h2>
+            <div class="services__container container grid">
+                <div class="services__card" data-aos="zoom-in">
+                    <i class='bx bx-code-alt services__icon'></i>
+                    <h3 class="services__title">Web Design</h3>
+                    <span class="services__button">View More <i class='bx bx-right-arrow-alt'></i></span>
+                </div>
+                <div class="services__card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class='bx bx-server services__icon'></i>
+                    <h3 class="services__title">Backend Dev</h3>
+                    <span class="services__button">View More <i class='bx bx-right-arrow-alt'></i></span>
+                </div>
+                <div class="services__card" data-aos="zoom-in" data-aos-delay="400">
+                    <i class='bx bx-shield-quarter services__icon'></i>
+                    <h3 class="services__title">Cyber Security</h3>
+                    <span class="services__button">View More <i class='bx bx-right-arrow-alt'></i></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="work section" id="work">
+            <h2 class="section__title" data-aos="fade-up">Recent Works</h2>
+            <div class="work__container container grid">
+                <div class="work__card" data-aos="fade-up">
+                    <img src="img/work1.jpg" alt="" class="work__img">
+                    <h3 class="work__title">Web Portfolio</h3>
+                    <a href="#" class="work__button">Demo <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="work__card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="img/work2.jpg" alt="" class="work__img">
+                    <h3 class="work__title">Login System</h3>
+                    <a href="#" class="work__button">Demo <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section__title" data-aos="fade-up">Contact Me</h2>
+            <div class="contact__container container grid">
+                <div class="contact__info">
+                    <div class="contact__card">
+    <i class='bx bx-mail-send contact__card-icon'></i>
+    <h3 class="contact__card-title">Email</h3>
+    <!-- Ganti dengan email kamu -->
+    <span class="contact__card-data">abdullahahmad@email.com</span>
+
+    <!-- Tambahkan link 'Write me' agar otomatis membuka aplikasi email -->
+    <a href="mailto:abdullahahmad@email.com" class="contact__button">
+        Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+    </a>
+</div>
+                </div>
+                <div class="contact__content">
+    <form action="" class="contact__form">
+        
+        <div class="contact__form-div">
+            <label class="contact__form-tag">Names</label>
+            <input type="text" placeholder="Insert your name" class="contact__form-input">
+        </div>
+
+        <div class="contact__form-div">
+            <label class="contact__form-tag">Mail</label>
+            <input type="email" placeholder="Insert your email" class="contact__form-input">
+        </div>
+
+        <div class="contact__form-div contact__form-area">
+            <label class="contact__form-tag">Project</label>
+            <textarea placeholder="Write your project" class="contact__form-input"></textarea>
+        </div>
+
+        <button class="button">Send Message</button>
+    </form>
+</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Ahmad<span>.</span></h1>
+            <ul class="footer__list">
+                <li><a href="#about" class="footer__link">About</a></li>
+                <li><a href="#work" class="footer__link">Projects</a></li>
+            </ul>
+            <span class="footer__copy">&#169; Ahmad Ahmad. All rights reserved.</span>
+        </div>
+    </footer>
+<!-- Library untuk Animasi Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Library JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- File JS Lokal kamu (Harus paling bawah) -->
+    <script src="js/script.js"></script>
+</body>
+</html>

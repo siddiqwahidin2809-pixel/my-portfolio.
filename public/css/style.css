@@ -1,0 +1,688 @@
+/* ==================== 1. VARIABEL & RESET ==================== */
+:root {
+    --header-height: 4.5rem;
+    --primary-color: #bc8f8f;
+    --primary-color-alt: #a37e7e;
+    --title-color: #333;
+    --text-color: #666;
+    --body-color: #fffaf0;
+    --container-color: #fff;
+    --body-font: 'Poppins', sans-serif;
+    --z-fixed: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; }
+img { max-width: 100%; height: auto; }
+
+/* ==================== 2. REUSABLE CLASSES ==================== */
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding: 6rem 0 2rem;
+}
+
+.section__title {
+    font-size: 2.25rem;
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ==================== BUTTONS ==================== */
+/* Styling Dasar Tombol */
+.contact__button {
+    display: inline-block;
+    background-color: #db2929; /* Warna coklat kemerahan awal kamu */
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem; /* Membuat tombol lonjong seperti di gambar */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Penting untuk animasi yang halus */
+    border: none; /* Menghilangkan border default */
+    outline: none;
+}
+
+/* Efek saat Kursor di Atas Tombol (Hover) */
+.contact__button:hover {
+    background-color: #d32b2b; /* Sedikit lebih terang saat disentuh */
+}
+
+/* === INI YANG KAMU MAU: Efek saat DITEKAN === */
+.contact__button:active {
+    background-color: #ff0000 !important; /* Menjadi MERAH TERANG saat ditekan */
+    transform: scale(0.95);    /* Efek visual tombol ditekan masuk */
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3); /* Pendaran merah */
+}
+/* ==================== 3. HEADER & NAV ==================== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    transition: .4s;
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav__logo span { color: var(--primary-color); }
+
+.nav__list {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.nav__link {
+    color: var(--title-color);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav__link:hover { color: var(--primary-color); }
+
+.nav__toggle, .nav__close {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--title-color);
+}
+
+/* ==================== 4. HOME ==================== */
+
+.home__container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Membagi 2 kolom secara paksa */
+    align-items: center;
+    column-gap: 1.5rem;
+    padding-top: 5rem;
+}
+
+.home__content {
+    display: grid;
+    row-gap: 1.5rem;
+    width: 100%; /* Memastikan konten teks tidak meluber */
+}
+
+.home__img-wrapper {
+    display: flex;
+    justify-content: flex-end; /* Memastikan foto mepet ke kanan */
+    width: 100%;
+}
+
+.home__title {
+    font-size: 4rem;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+
+.home__education {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+/* Container utama ikon */
+.home__social {
+    display: flex;
+    column-gap: 1.5rem; /* Jarak antar ikon agar rapi */
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* Base style untuk semua ikon agar ukurannya sama */
+
+/* --- EFEK HOVER KEREN --- */
+/* Container utama ikon */
+.home__social {
+    display: flex;
+    column-gap: 1.25rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* Base style: Menyamakan semua bulatan ikon */
+.home__social-icon {
+    width: 42px;
+    height: 42px;
+    background-color: rgba(0, 0, 0, 0.05); /* Lingkaran transparan halus */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--title-color);
+    transition: .3s;
+}
+
+/* --- WARNA MASING-MASING SAAT HOVER --- */
+
+/* GitHub: Hitam/Abu Gelap */
+.home__social-icon:has(.bxl-github):hover {
+    background-color: #565252;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Facebook: Biru Khas FB */
+.home__social-icon:has(.bxl-facebook):hover {
+    background-color: #5996e7;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+}
+
+/* WhatsApp: Hijau Khas WA */
+.home__social-icon:has(.bxl-whatsapp):hover {
+    background-color: #25D366;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* Efek sedikit melayang saat disentuh */
+.home__social-icon:hover {
+    transform: translateY(-5px);
+}
+
+/* Efek saat diklik (Active) */
+.home__social-icon:active {
+    transform: scale(0.85); /* Efek membal yang memuaskan */
+}
+/* Efek saat DITEKAN (Active) */
+.home__social-icon:active {
+    transform: scale(0.9);
+}
+.home__img-bg {
+    width: 400px;
+    height: 400px;
+    background-color: #f5e6e8;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    border: 3px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.home__img { width: 90%; }
+
+/* ==================== 5. ABOUT ==================== */
+.about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.about__img {
+    width: 350px;
+    border-radius: 1rem;
+    justify-self: center;
+}
+
+.about__description {
+    margin-bottom: 2.5rem;
+}
+
+/* ==================== 6. SKILLS ==================== */
+
+
+.skills__content {
+    background: rgba(255, 255, 255, 0.03); /* Transparan tipis */
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Garis tepi halus */
+    backdrop-filter: blur(10px); /* Efek kaca buram */
+    -webkit-backdrop-filter: blur(10px);
+    transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Garis merah tipis di bagian atas kartu */
+.skills__content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ff0000; /* Merah Alter Ego */
+    transition: .4s;
+}
+
+.skills__content:hover {
+    transform: translateY(-10px); /* Melayang sedikit */
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 0, 0, 0.3); /* Border berubah merah redup */
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.15); /* Cahaya neon merah */
+}
+
+.skills__content:hover::before {
+    width: 100%; /* Garis merah memanjang saat di-hover */
+}
+
+/* Styling untuk teks skill agar lebih tajam */
+.skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.skills__level {
+    font-size: var(--tiny-font-size);
+    color: var(--text-color);
+}
+
+/* Ikon centang di sebelah skill */
+.skills__data i {
+    color: #ff0000; /* Ubah centang jadi merah */
+    font-size: 1.25rem;
+}
+
+/* Animasi khusus untuk icon saat kartu disentuh */
+.skills__content:hover .skills__data i {
+    transform: rotate(360deg);
+    transition: .6s;
+}
+
+/* ==================== 7. SERVICES ==================== */
+.services__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* Memberi jarak antar kartu agar tidak menempel */
+}
+
+.services__card {
+    background-color: #fff;
+    padding: 3.5rem 1.5rem;
+    border-radius: 1.25rem;
+    text-align: center;
+    transition: .4s;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.services__card:hover {
+    background-color: #f15151; /* Berubah jadi merah mencolok */
+    border-color: #d75656;
+    transform: scale(1.05); /* Sedikit membesar agar menarik */
+}
+
+/* Teks dan ikon otomatis jadi putih saat kartu di-hover */
+.services__card:hover .services__icon,
+.services__card:hover .services__title,
+.services__card:hover .services__button {
+    color: #fff;
+}
+
+.services__icon {
+    font-size: 3.5rem;
+    color: #ff0000; /* Warna merah agar senada dengan Alter Ego */
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: .4s;
+}
+
+/* ==================== 8. WORK/PORTFOLIO ==================== */
+.work__container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.work__card {
+    background-color: var(--container-color);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.work__img {
+    border-radius: .75rem;
+    margin-bottom: 1rem;
+}
+
+.work__title {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    color: var(--title-color);
+}
+
+
+/* ==================== CONTACT ==================== */
+.contact__form-tag {
+    position: absolute;
+    top: -0.75rem; /* Menaikkan tulisan agar di atas garis */
+    left: 1.25rem;
+    font-size: 0.8rem;
+    padding: 0 0.25rem;
+    background-color: #fffaf0; /* Gunakan warna background body agar garis tertutup */
+    z-index: 10;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact__form-div {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 4.5rem; /* Memberi ruang agar label tidak terpotong */
+}
+
+.contact__form-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    background: none;
+    padding: 1.5rem;
+    border-radius: .75rem;
+    z-index: 1;
+}
+/* Efek pas kotak input diklik (fokus) */
+.contact__form-input:focus {
+    border-color: #ff0000; /* Garis berubah jadi merah Alter Ego */
+    outline: none;
+}
+
+/* Membuat tulisan label ikut berubah warna saat input diklik */
+.contact__form-input:focus ~ .contact__form-tag {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+.contact__form {
+    width: 400px; /* Menentukan lebar form agar kotak input kembali luas */
+}
+
+.contact__form-div {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 4rem;
+}
+
+.contact__form-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    background: none;
+    color: var(--text-color);
+    outline: none;
+    padding: 1.5rem;
+    border-radius: .75rem;
+    z-index: 1;
+}
+
+/* Khusus untuk area pesan agar lebih tinggi */
+.contact__form-area {
+    height: 10rem;
+}
+
+.contact__form-area textarea {
+    resize: none;
+}
+
+.contact__form-area { height: 10rem; }
+
+/* ==================== 10. FOOTER ==================== */
+.footer {
+    background-color: var(--primary-color);
+    padding: 4rem 0 3rem;
+    border-top: 1px solid rgba(250, 246, 246, 0.998);
+}
+
+.footer__title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Warna merah khusus untuk titik di nama kamu */
+.footer__title span {
+    color: #fff9f9;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer__link {
+    color: #fff;
+    transition: .3s;
+    font-size: 0.9rem;
+}
+
+.footer__link:hover {
+    color: #ff0000; /* Berubah merah saat disentuh kursor */
+}
+
+.footer__copy {
+    display: block;
+    margin-top: 3.5rem;
+    color: #ccc;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* ==================== 11. RESPONSIVE ==================== */
+@media screen and (max-width: 968px) {
+    .home__title { font-size: 3rem; }
+    .home__img-bg { width: 320px; height: 320px; }
+    .services__container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        background-color: var(--body-color);
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 4rem 0;
+        transition: .4s;
+        box-shadow: 0 4px 20px rgba(0,0,0,.1);
+    }
+    .show-menu { top: 0; }
+    .nav__list { flex-direction: column; align-items: center; row-gap: 2rem; }
+    .nav__toggle, .nav__close { display: block; }
+    
+    .home__content { grid-template-columns: 1fr; text-align: center; }
+    .home__img-bg { margin: 0 auto; }
+    .about__container, .skills__container, .work__container, .contact__container {
+        grid-template-columns: 1fr;
+    }
+    .services__container { grid-template-columns: 1fr; }
+}
+/* ==================== ACTIVE LINK ==================== */
+/* Membuat warna teks berubah saat aktif */
+.active-link {
+    color: var(--primary-color) !important;
+    position: relative;
+}
+
+/* Membuat garis bawah yang "tumbuh" di bawah teks */
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem; /* Jarak garis dari tulisan */
+    left: 0;
+    width: 100%; /* Garis sepanjang tulisan */
+    height: 2px; /* Ketebalan garis */
+    background-color: var(--primary-color);
+}
+/* ==================== HOME SOCIAL COLORS ==================== */
+/* Warna default ikon */
+.home__social-icon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    transition: .3s;
+}
+
+/* Warna saat kursor diarahkan (Hover) */
+
+/* GitHub - Hitam/Gelap */
+.home__social-icon:nth-child(1):hover {
+    color: #333;
+}
+
+/* LinkedIn - Biru Terang */
+.home__social-icon:nth-child(2):hover {
+    color: #0077b5;
+}
+
+/* Facebook - Biru Gelap */
+.home__social-icon:nth-child(3):hover {
+    color: #1877f2;
+}
+/* ==================== CSS TAMBAHAN UNTUK JS ANIMASI ==================== */
+
+/* 1. Mencegah Elemen Hilang (Fallback) */
+/* Jika library lambat memuat, elemen akan tetap muncul setelah 1 detik */
+.home__data, .home__handle, .home__social, .about__img, 
+.about__data, .skills__content, .services__card, .work__card {
+    transition: opacity 1s, transform 1s;
+}
+
+/* 2. Efek Glassmorphism (Sesuai JS Theme) */
+.skills__content, 
+.services__card, 
+.work__card {
+    background-color: var(--container-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem 1.5rem;
+    border-radius: 1.25rem;
+    transition: .4s;
+}
+
+/* 3. Animasi Hover Keren */
+.services__card:hover {
+    background-color: #ff0000 !important; /* Warna merah favorit kamu */
+    transform: translateY(-10px) scale(1.03) !important;
+}
+
+.services__card:hover .services__title,
+.services__card:hover .services__icon,
+.services__card:hover .services__button {
+    color: #fff !important;
+}
+
+/* 4. Indikator Menu Aktif (Sesuai JS ScrollActive) */
+.active-link {
+    position: relative;
+    color: #ff0000 !important;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+}
+
+/* 5. Efek Scroll Header (Sesuai JS scrollHeader) */
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 6. Dark Theme Variables (Wajib ada untuk JS Theme Toggle) */
+body.dark-theme {
+    --title-color: hsl(var(--hue), 8%, 95%);
+    --text-color: hsl(var(--hue), 8%, 75%);
+    --body-color: hsl(var(--hue), 54%, 8%);
+    --container-color: hsl(var(--hue), 54%, 12%);
+}
+/* ==================== WORK SECTION REFINEMENT ==================== */
+
+.work__card {
+    background-color: #fff;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+/* Efek saat kartu Work disentuh */
+.work__card:hover {
+    transform: translateY(-10px); /* Kartu naik ke atas */
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.15); /* Pendaran merah halus */
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.work__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--title-color);
+}
+
+/* Link Demo agar lebih menarik */
+.work__button {
+    width: max-content;
+    color: #ff0000; /* Merah sesuai tema kamu */
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.work__button:hover .work__icon {
+    transform: translateX(0.25rem); /* Panah bergeser sedikit ke kanan */
+}
+
+.work__icon {
+    font-size: 1rem;
+    transition: .3s;
+}
+
