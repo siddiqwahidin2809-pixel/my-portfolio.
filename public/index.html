@@ -213,45 +213,55 @@
 
         <section class="contact section" id="contact">
             <h2 class="section__title" data-aos="fade-up">Contact Me</h2>
-            <div class="contact__container container grid">
-                <div class="contact__info">
-                    <div class="contact__card">
-    <i class='bx bx-mail-send contact__card-icon'></i>
-    <h3 class="contact__card-title">Email</h3>
-    <!-- Ganti dengan email kamu -->
-    <span class="contact__card-data">abdullahahmad@email.com</span>
-    <!-- Tambahkan ini di bawahnya untuk NIM -->
-    <h3 class="contact__card-title">NIM</h3>
-    <span class="contact__card-data" id="nim-user">Memuat...</span>
+        <!-- Baris 216: Mulai pembungkus utama -->
+<div class="contact__container container grid">
+    
+    <!-- SISI KIRI: KARTU PROFIL -->
+    <div class="contact__info">
+        <div class="contact__card">
+            <i class='bx bx-mail-send contact__card-icon'></i>
+            <h3 class="contact__card-title">Email</h3>
+            <span class="contact__card-data">abdullahahmad@email.com</span>
+            
+            <span class="contact__card-data">mahasiswa it di Unds</span>
+            
+            <span class="contact__card-data">
+                <strong>Hobi: </strong>
+                <span id="hobi-user">bola and game</span>
+            </span>
 
+            <h3 class="contact__card-title">NIM</h3>
+            <span class="contact__card-data">245920109</span>
 
-    <!-- Tambahkan link 'Write me' agar otomatis membuka aplikasi email -->
-    <a href="mailto:abdullahahmad@email.com" class="contact__button">
-        Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
-    </a>
-</div>
-                </div>
-                <div class="contact__content">
-    <form action="" class="contact__form">
-        
-        <div class="contact__form-div">
-            <label class="contact__form-tag">Names</label>
-            <input type="text" placeholder="Insert your name" class="contact__form-input">
-        </div>
+            <a href="mailto:abdullahahmad@email.com" class="contact__button">
+                Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+            </a>
+        </div> <!-- Penutup contact__card -->
+    </div> <!-- Penutup contact__info -->
 
-        <div class="contact__form-div">
-            <label class="contact__form-tag">Mail</label>
-            <input type="email" placeholder="Insert your email" class="contact__form-input">
-        </div>
+    <!-- SISI KANAN: FORM PESAN -->
+    <div class="contact__content">
+        <form action="" class="contact__form">
+            <div class="contact__form-div">
+                <label class="contact__form-tag">Names</label>
+                <input type="text" placeholder="Insert your name" class="contact__form-input">
+            </div>
+            
+            <div class="contact__form-div">
+                <label class="contact__form-tag">Mail</label>
+                <input type="email" placeholder="Insert your email" class="contact__form-input">
+            </div>
 
-        <div class="contact__form-div contact__form-area">
-            <label class="contact__form-tag">Project</label>
-            <textarea placeholder="Write your project" class="contact__form-input"></textarea>
-        </div>
+            <div class="contact__form-div contact__form-area">
+                <label class="contact__form-tag">Project</label>
+                <textarea placeholder="Write your project" class="contact__form-input"></textarea>
+            </div>
 
-        <button class="button">Send Message</button>
-    </form>
-</div>
+            <button class="button">Send Message</button>
+        </form>
+    </div> <!-- Penutup contact__content -->
+
+</div> <!-- PENUTUP UTAMA (Container Grid) -->
         </section>
     </main>
 

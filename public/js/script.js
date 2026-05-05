@@ -34,10 +34,9 @@ const scrollActive = () =>{
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-
+      sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
         if(sectionsClass){
             if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
                 sectionsClass.classList.add('active-link')
@@ -46,9 +45,9 @@ const scrollActive = () =>{
             }
         }                                                    
     })
+    window.addEventListener('scroll', scrollActive)
 }
-// Jalankan saat scroll
-window.addEventListener('scroll', scrollActive)
+
 // Jalankan saat REFRESH/RESTART agar element aktif kembali
 window.addEventListener('load', scrollActive)
 
@@ -69,7 +68,6 @@ const scrollUp = () =>{
 }
 window.addEventListener('scroll', scrollUp)
 window.addEventListener('load', scrollUp)
-
 /* ==================== 6. INISIALISASI AOS ==================== */
 AOS.init({
     duration: 1200,
@@ -80,13 +78,33 @@ async function fetchProfilData() {
         const response = await fetch('/api/data');
         const data = await response.json();
 
+        // Mengisi NIM (245920109)
         const nimElement = document.getElementById('nim-user');
         if (nimElement) {
             nimElement.innerText = data.nim;
         }
+
+        // Mengisi Hobi (bola and game)
+        const hobiElement = document.getElementById('hobi-user');
+        if (hobiElement) {
+            hobiElement.innerText = data.hobi;
+        }
+
     } catch (error) {
         console.error('Gagal mengambil data:', error);
     }
 }
 
+fetchProfilData();
+async function fetchProfilData() {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+
+        document.getElementById('nim-user').innerText = data.nim;
+        document.getElementById('hobi-user').innerText = data.hobi;
+    } catch (error) {
+        console.error('Error mengambil data:', error);
+    }
+}
 fetchProfilData();

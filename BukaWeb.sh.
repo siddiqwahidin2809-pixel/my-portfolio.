@@ -1,0 +1,3 @@
+#!/bin/bash
+# Jalankan node di background, browser akan dibuka otomatis oleh app.js
+node app.js &
