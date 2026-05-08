@@ -17,6 +17,8 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
+                    <li class="nav__item">
+                     <a href="send.html" class="nav__link">Contact</a>
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
@@ -37,8 +39,8 @@
            <!-- Baris 36: Hapus kata 'grid' jika masih ada -->
 <div class="home__container container">
     
-    <!-- SEMUA TEKS MASUK KE DALAM HOME__DATA -->
-    <div class="home__data">
+     <!-- SEMUA TEKS MASUK KE DALAM HOME__DATA -->
+     <div class="home__data">
         <span class="home__subtitle">Hello, I'm</span>
         <h1 class="home__title">Akhi Ahmad</h1>
         <h3 class="home__education">Maba Teknologi Informasi</h3>
@@ -47,26 +49,25 @@
             Fokus pada Full-stack Web Development dengan html,css,javascript,express,php,sql,python,mongodb
         </p>
 
-        <!-- Ikon Sosial Media (LinkedIn sudah dihapus) -->
         <div class="home__social">
-            <a href="#" target="_blank" class="home__social-icon"><i class='bx bxl-github'></i></a>
-            <a href="#" target="_blank" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
-            <a href="#" target="_blank" class="home__social-icon"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://github.com/username-githubmu" target="_blank" class="home__social-icon">
+        <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://facebook.com/username-fbmu" target="_blank" class="home__social-icon">
+        <i class='bx bxl-facebook'></i>
+       </a>
+       <a href="https://wa.me/628xxxxxxxxxx" target="_blank" class="home__social-icon">
+        <i class='bx bxl-whatsapp'></i>
+      </a>
+      </div>
         </div>
         <div class="home__buttons">
             <a href="#" class="button">Download CV</a>
             <a href="#about" class="button button--ghost">Explore More</a>
         </div>
-    </div> <!-- PENUTUP HOME__DATA DI SINI -->
+     </div> <!-- PENUTUP HOME__DATA DI SINI -->
 
-    <!-- FOTO BERADA DI LUAR HOME__DATA TAPI MASIH DI DALAM HOME__CONTAINER -->
-    <div class="home__img-wrapper">
-        <div class="home__img-bg">
-            <img src="img/portofolio6.jpeg" alt="Ahmad" class="home__img">
-        </div>
-    </div>
-
-</div>
+     <!-- FOTO BERADA DI LUAR HOME__DATA TAPI MASIH DI DALAM HOME__CONTAINER -->
         </section>
 
         <section class="about section" id="about">
@@ -103,113 +104,133 @@
             </div>
         </section>
 <section class="skills section" id="skills">
-    <h2 class="section__title" data-aos="fade-up">My Skills</h2>
+    <h2 class="section__title">My Skills</h2>
+
+  
 
     <div class="skills__container container grid">
-        <!-- Frontend Development -->
-        <div class="skills__content" data-aos="fade-right">
-            <h3 class="skills__title">Frontend Development</h3>
+        <div class="skills__hologram">
+            <h3 class="skills__hologram-title">Development Skills</h3>
 
-            <div class="skills__box">
-                <div class="skills__group">
-                    <div class="skills__data">
-                        <i class='bx bxs-badge-check'></i>
-                        <div>
-                            <h3 class="skills__name">HTML</h3>
-                            <span class="skills__level">Advanced</span>
-                        </div>
-                    </div>
+            <div class="skills__data">
+    <div class="skills__names">
+        <span class="skills__name"><i class='bx bxl-html5 skills__icon'></i> HTML</span>
+        <span class="skills__number">90%</span>
+    </div>
+    <div class="skills__bar">
+        <span class="skills__percentage" style="width: 90%;"></span>
+    </div>
+</div>
 
-                    <div class="skills__data">
-                        <i class='bx bxs-badge-check'></i>
-                        <div>
-                            <h3 class="skills__name">CSS</h3>
-                            <span class="skills__level">Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div class="skills__data">
-                        <i class='bx bxs-badge-check'></i>
-                        <div>
-                            <h3 class="skills__name">JavaScript</h3>
-                            <span class="skills__level">Intermediate</span>
-                        </div>
-                    </div>
+            <div class="skills__data">
+                <div class="skills__titles">
+                    <h3 class="skills__name"><i class='bx bx-data' ></i> CSS</h3>
+                    <span class="skills__number">85%</span>
                 </div>
+                <div class="skills__bar"><span class="skills__percentage skills__css"></span></div>
             </div>
-        </div>
 
-        <!-- Backend & OS -->
-        <div class="skills__content" data-aos="fade-left">
-            <h3 class="skills__title">Backend & OS</h3>
-
-            <div class="skills__box">
-                <div class="skills__group">
-                    <div class="skills__data">
-                        <i class='bx bxs-badge-check'></i>
-                        <div>
-                            <h3 class="skills__name">Node JS</h3>
-                            <span class="skills__level">Basic</span>
-                        </div>
-                    </div>
-
-                    <div class="skills__data">
-                        <i class='bx bxs-badge-check'></i>
-                        <div>
-                            <h3 class="skills__name">Python</h3>
-                            <span class="skills__level">Basic</span>
-                        </div>
-                    </div>
-
-                    <div class="skills__data">
-                        <i class='bx bxs-badge-check'></i>
-                        <div>
-                            <h3 class="skills__name">Debian Linux</h3>
-                            <span class="skills__level">Intermediate</span>
-                        </div>
-                    </div>
+            <div class="skills__data">
+                <div class="skills__titles">
+                    <h3 class="skills__name"><i class='bx bx-data' ></i> JavaScript</h3>
+                    <span class="skills__number">75%</span>
                 </div>
+                <div class="skills__bar"><span class="skills__percentage skills__js"></span></div>
+            </div>
+
+            <div class="skills__data">
+                <div class="skills__titles">
+                    <h3 class="skills__name"><i class='bx bx-data' ></i> PHP</h3>
+                    <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar"><span class="skills__percentage skills__php"></span></div>
+            </div>
+
+            <div class="skills__data">
+                <div class="skills__titles">
+                    <h3 class="skills__name"><i class='bx bx-data' ></i> Python</h3>
+                    <span class="skills__number">70%</span>
+                </div>
+                <div class="skills__bar"><span class="skills__percentage skills__python"></span></div>
+            
+        
+        <div class="skills__data">
+    <div class="skills__titles">
+        <h3 class="skills__name"><i class='bx bxs-data'></i> MariaDB / SQL</h3>
+        <span class="skills__number">80%</span>
+    </div>
+    <div class="skills__bar">
+        <span class="skills__percentage skills__mariadb"></span>
+    
+
+        <div class="skills__integrated-display">
+            <h3 class="skills__integrated-title">Backend & OS</h3>
+            <div class="skills__photo-frame">
+                <img src="img/skils.jpg" alt="Profile and Terminal Photo" class="skils__photo">
             </div>
         </div>
     </div>
 </section>
         
         <section class="services section" id="services">
-            <h2 class="section__title" data-aos="fade-up">Services</h2>
-            <div class="services__container container grid">
-                <div class="services__card" data-aos="zoom-in">
-                    <i class='bx bx-code-alt services__icon'></i>
-                    <h3 class="services__title">Web Design</h3>
-                    <span class="services__button">View More <i class='bx bx-right-arrow-alt'></i></span>
-                </div>
-                <div class="services__card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class='bx bx-server services__icon'></i>
-                    <h3 class="services__title">Backend Dev</h3>
-                    <span class="services__button">View More <i class='bx bx-right-arrow-alt'></i></span>
-                </div>
-                <div class="services__card" data-aos="zoom-in" data-aos-delay="400">
-                    <i class='bx bx-shield-quarter services__icon'></i>
-                    <h3 class="services__title">Cyber Security</h3>
-                    <span class="services__button">View More <i class='bx bx-right-arrow-alt'></i></span>
-                </div>
-            </div>
-        </section>
+    <h2 class="section__title">Professional Specialization</h2>
+    <span class="section__subtitle">Core Engineering Solutions</span>
 
-        <section class="work section" id="work">
-            <h2 class="section__title" data-aos="fade-up">Recent Works</h2>
-            <div class="work__container container grid">
-                <div class="work__card" data-aos="fade-up">
-                    <img src="img/work1.jpg" alt="" class="work__img">
-                    <h3 class="work__title">Web Portfolio</h3>
-                    <a href="#" class="work__button">Demo <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-                <div class="work__card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="img/work2.jpg" alt="" class="work__img">
-                    <h3 class="work__title">Login System</h3>
-                    <a href="#" class="work__button">Demo <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
+    <div class="services__container container grid">
+        <div class="services__card">
+            <div class="services__icon-wrapper">
+                <i class='bx bx-cog services__icon'></i>
             </div>
-        </section>
+            <h3 class="services__title">Enterprise <br> Software Engineering</h3>
+            <p class="services__description">
+                Applying rigorous engineering principles to design, develop, and maintain high-quality software systems. 
+                I specialize in the complete Software Development Life Cycle (SDLC), ensuring every application 
+                is built for scalability, reliability, and long-term technical sustainability.
+            </p>
+            <ul class="services__list">
+                <a href="send.html" class="button">Hire Me</a>
+                <li><i class='bx bx-check-double'></i> System Architecture Design</li>
+                <li><i class='bx bx-check-double'></i> SDLC Lifecycle Management</li>
+                <li><i class='bx bx-check-double'></i> Technical Documentation</li>
+            </ul>
+        </div>
+
+        <div class="services__card">
+            <div class="services__icon-wrapper">
+                <i class='bx bx-code-alt services__icon'></i>
+            </div>
+            <h3 class="services__title">Full-Stack <br> Software Development</h3>
+            <p class="services__description">
+                Delivering comprehensive end-to-end development services across diverse technology stacks. 
+                From responsive frontend interfaces to robust backend logic, I build integrated software 
+                solutions that translate complex business requirements into high-performing digital products.
+            </p>
+            <ul class="services__list">
+                <a href="send.html" class="button--small">Order Now</a>
+                <li><i class='bx bx-check-double'></i> End-to-End Application Dev</li>
+                <li><i class='bx bx-check-double'></i> API Integration & Design</li>
+                <li><i class='bx bx-check-double'></i> Performance Optimization</li>
+            </ul>
+        </div>
+
+        <div class="services__card">
+            <div class="services__icon-wrapper">
+                <i class='bx bx-shield-quarter services__icon'></i>
+            </div>
+            <h3 class="services__title">Software Integrity <br> & System Hardening</h3>
+            <p class="services__description">
+                Ensuring software security and operational stability through rigorous testing and system optimization. 
+                I implement defensive coding practices and environment hardening to protect digital assets 
+                and maintain high system availability within modern Linux-based infrastructures.
+            </p>
+            <ul class="services__list">
+                <li><i class='bx bx-check-double'></i> Code Auditing & Refactoring</li>
+                <li><i class='bx bx-check-double'></i> Environment Configuration</li>
+                <li><i class='bx bx-check-double'></i> Security-Driven Development</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
         <section class="contact section" id="contact">
             <h2 class="section__title" data-aos="fade-up">Contact Me</h2>
@@ -221,19 +242,18 @@
         <div class="contact__card">
             <i class='bx bx-mail-send contact__card-icon'></i>
             <h3 class="contact__card-title">Email</h3>
-            <span class="contact__card-data">abdullahahmad@email.com</span>
+            <span class="contact__card-data">abdullahahmad@gmail.com</span>
             
             <span class="contact__card-data">mahasiswa it di Unds</span>
             
             <span class="contact__card-data">
                 <strong>Hobi: </strong>
                 <span id="hobi-user">bola and game</span>
-            </span>
 
             <h3 class="contact__card-title">NIM</h3>
             <span class="contact__card-data">245920109</span>
 
-            <a href="mailto:abdullahahmad@email.com" class="contact__button">
+            <a href="mailto:abdullahahmad@gmail.com" class="contact__button">
                 Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
             </a>
         </div> <!-- Penutup contact__card -->
@@ -241,20 +261,20 @@
 
     <!-- SISI KANAN: FORM PESAN -->
     <div class="contact__content">
-        <form action="" class="contact__form">
+    <form action="/submit-pesan" method="POST" class="contact__form">
             <div class="contact__form-div">
                 <label class="contact__form-tag">Names</label>
-                <input type="text" placeholder="Insert your name" class="contact__form-input">
+                <input type="text" name="nama" placeholder="Insert your name" class="contact__form-input">
             </div>
             
             <div class="contact__form-div">
                 <label class="contact__form-tag">Mail</label>
-                <input type="email" placeholder="Insert your email" class="contact__form-input">
+                <input type="email" name="email" placeholder="Insert your email" class="contact__form-input">
             </div>
 
             <div class="contact__form-div contact__form-area">
                 <label class="contact__form-tag">Project</label>
-                <textarea placeholder="Write your project" class="contact__form-input"></textarea>
+                <textarea name="isi_pesan" placeholder="Write your project" class="contact__form-input" required></textarea>
             </div>
 
             <button class="button">Send Message</button>
@@ -269,6 +289,7 @@
         <div class="footer__container container">
             <h1 class="footer__title">Ahmad<span>.</span></h1>
             <ul class="footer__list">
+                <a href="send.html">Hubungi saya di sini</a>
                 <li><a href="#about" class="footer__link">About</a></li>
                 <li><a href="#work" class="footer__link">Projects</a></li>
             </ul>
