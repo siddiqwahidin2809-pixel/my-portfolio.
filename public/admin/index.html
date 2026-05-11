@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<body class="bg-gray-900 text-gray-100 font-sans min-h-screen">
+
+    <div class="container mx-auto p-6">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent uppercase tracking-wider">
+                <i class="fas fa-database mr-2"></i> Dashboard Pesan
+            </h1>
+            <div class="text-right">
+                <span class="bg-blue-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Admin Mode</span>
+                <p class="text-gray-500 text-xs mt-1">Sistem Aktif</p>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-gray-700/50 text-gray-400">
+                    <tr>
+                        <th class="p-5 font-semibold uppercase text-xs tracking-widest text-center w-24">ID</th>
+                        <th class="p-5 font-semibold uppercase text-xs tracking-widest">Pengirim</th>
+                        <th class="p-5 font-semibold uppercase text-xs tracking-widest">Isi Pesan</th>
+                        <th class="p-5 font-semibold uppercase text-xs tracking-widest text-center">Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody id="tabel-pesan">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function loadPesan() {
+            try {
+                const response = await fetch('/api/pesan');
+                const data = await response.json();
+                const tableBody = document.getElementById('tabel-pesan');
+                tableBody.innerHTML = '';
+
+                if (data.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="4" class="p-10 text-center text-gray-500 italic">Belum ada pesan masuk, Mad.</td></tr>';
+                    return;
+                }
+            data.forEach(p => {
+    // Kita pecah data Waktu dari database
+    // Ganti baris 54 yang lama dengan ini:
+    const objekWaktu = p.Waktu ? new Date(p.Waktu) : new Date();
+    const opsiTanggal = { year: 'numeric', month: 'short', day: 'numeric' };
+    const opsiJam = { hour: '2-digit', minute: '2-digit' };
+    
+    const tgl = objekWaktu.toLocaleDateString('id-ID', opsiTanggal); // Hasil: 10 Mei 2026
+    const jam = objekWaktu.toLocaleTimeString('id-ID', opsiJam);    // Hasil: 21:17
+
+    tableBody.innerHTML += `
+        <tr class="border-b border-gray-700/50 hover:bg-gray-700/30 transition">
+            <td class="p-5 text-center text-gray-500 text-xs font-mono">
+                <span class="block text-blue-300 font-bold">${tgl}</span>
+                <span class="text-[10px] text-gray-400">${jam} WIB</span>
+            </td>
+            <td class="p-5 text-blue-400 font-bold text-sm">${p.nama}</td>
+            <td class="p-5 text-gray-300 text-sm">${p.pesan}</td>
+            <td class="p-5 text-center">
+                <button onclick="hapusPesan(${p.id})" class="bg-red-500/10 hover:bg-red-600 text-red-500 hover:text-white px-4 py-2 rounded-xl transition border border-red-500/20">
+                    <i class="fas fa-trash-alt"></i> Hapus
+                </button>
+            </td>
+        </tr>
+    `;
+});
+
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        async function hapusPesan(id) {
+            if(confirm('Yakin mau hapus pesan ini dari database?')) {
+                const res = await fetch(`/api/pesan/${id}`, { method: 'DELETE' });
+                if(res.ok) loadPesan();
+            }
+        }
+
+        loadPesan();
+    </script>
+</body>
+</html>

@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,12 +19,12 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                     <a href="send.html" class="nav__link">Contact</a>
+                     
+                        
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
                 <div class="nav__close" id="nav-close"><i class='bx bx-x'></i></div>
@@ -103,70 +104,76 @@
                 </div>
             </div>
         </section>
-<section class="skills section" id="skills">
-    <h2 class="section__title">My Skills</h2>
+<section class="skills-section" id="skills">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <p class="section-subtitle">Teknologi yang saya gunakan untuk membangun solusi</p>
 
-  
-
-    <div class="skills__container container grid">
-        <div class="skills__hologram">
-            <h3 class="skills__hologram-title">Development Skills</h3>
-
-            <div class="skills__data">
-    <div class="skills__names">
-        <span class="skills__name"><i class='bx bxl-html5 skills__icon'></i> HTML</span>
-        <span class="skills__number">90%</span>
-    </div>
-    <div class="skills__bar">
-        <span class="skills__percentage" style="width: 90%;"></span>
-    </div>
-</div>
-
-            <div class="skills__data">
-                <div class="skills__titles">
-                    <h3 class="skills__name"><i class='bx bx-data' ></i> CSS</h3>
-                    <span class="skills__number">85%</span>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon-name">
+                    <i class="fab fa-html5 skill-icon html-color"></i>
+                    <span class="skill-name">HTML</span>
                 </div>
-                <div class="skills__bar"><span class="skills__percentage skills__css"></span></div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+                <span class="skill-percentage">90%</span>
             </div>
 
-            <div class="skills__data">
-                <div class="skills__titles">
-                    <h3 class="skills__name"><i class='bx bx-data' ></i> JavaScript</h3>
-                    <span class="skills__number">75%</span>
+            <div class="skill-card">
+                <div class="skill-icon-name">
+                    <i class="fab fa-css3-alt skill-icon css-color"></i>
+                    <span class="skill-name">CSS</span>
                 </div>
-                <div class="skills__bar"><span class="skills__percentage skills__js"></span></div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+                <span class="skill-percentage">85%</span>
             </div>
 
-            <div class="skills__data">
-                <div class="skills__titles">
-                    <h3 class="skills__name"><i class='bx bx-data' ></i> PHP</h3>
-                    <span class="skills__number">80%</span>
+            <div class="skill-card active-skill">
+                <div class="skill-icon-name">
+                    <i class="fab fa-js-square skill-icon js-color"></i>
+                    <span class="skill-name">JavaScript</span>
                 </div>
-                <div class="skills__bar"><span class="skills__percentage skills__php"></span></div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+                <span class="skill-percentage">75%</span>
             </div>
 
-            <div class="skills__data">
-                <div class="skills__titles">
-                    <h3 class="skills__name"><i class='bx bx-data' ></i> Python</h3>
-                    <span class="skills__number">70%</span>
+            <div class="skill-card">
+                <div class="skill-icon-name">
+                    <i class="fab fa-php skill-icon php-color"></i>
+                    <span class="skill-name">PHP</span>
                 </div>
-                <div class="skills__bar"><span class="skills__percentage skills__python"></span></div>
-            
-        
-        <div class="skills__data">
-    <div class="skills__titles">
-        <h3 class="skills__name"><i class='bx bxs-data'></i> MariaDB / SQL</h3>
-        <span class="skills__number">80%</span>
-    </div>
-    <div class="skills__bar">
-        <span class="skills__percentage skills__mariadb"></span>
-    
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+            </div>
 
-        <div class="skills__integrated-display">
-            <h3 class="skills__integrated-title">Backend & OS</h3>
-            <div class="skills__photo-frame">
-                <img src="img/skils.jpg" alt="Profile and Terminal Photo" class="skils__photo">
+            <div class="skill-card active-skill">
+                <div class="skill-icon-name">
+                    <i class="fas fa-database skill-icon db-color"></i>
+                    <span class="skill-name">MariaDB / SQL</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+            </div>
+
+            <div class="skill-card active-skill">
+                <div class="skill-icon-name">
+                    <i class="fab fa-node-js skill-icon node-color"></i>
+                    <span class="skill-name">Node.js / API</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+                <span class="skill-percentage">70%</span>
             </div>
         </div>
     </div>
@@ -254,7 +261,9 @@
             <span class="contact__card-data">245920109</span>
 
             <a href="mailto:abdullahahmad@gmail.com" class="contact__button">
+                
                 Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+                <a href="send.html" class="nav__link">Contact</a>
             </a>
         </div> <!-- Penutup contact__card -->
     </div> <!-- Penutup contact__info -->
@@ -274,6 +283,7 @@
 
             <div class="contact__form-div contact__form-area">
                 <label class="contact__form-tag">Project</label>
+
                 <textarea name="isi_pesan" placeholder="Write your project" class="contact__form-input" required></textarea>
             </div>
 
@@ -289,7 +299,9 @@
         <div class="footer__container container">
             <h1 class="footer__title">Ahmad<span>.</span></h1>
             <ul class="footer__list">
-                <a href="send.html">Hubungi saya di sini</a>
+                <li class="nav__item">
+              <a href="send.html" class="nav__link nav__link-contact">Contact</a>
+               </li>
                 <li><a href="#about" class="footer__link">About</a></li>
                 <li><a href="#work" class="footer__link">Projects</a></li>
             </ul>
